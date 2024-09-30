@@ -1,5 +1,6 @@
 package ie.atu.week3yr4;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,4 +28,6 @@ public class Controller {
     public String addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
+}
+
 
