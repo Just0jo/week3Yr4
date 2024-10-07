@@ -7,13 +7,15 @@ import lombok.NoArgsConstructor;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Max;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class Product {
-    @NotNull(message = "id cannot be null")
+    @Max(value = 9, message = "id cannot be greater than 8")
     private String id;
+
 
     @NotNull(message = "Name cannot be null")
     private String name;
